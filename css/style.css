@@ -118,7 +118,7 @@
  .header__btn-input {
      padding: 15px 25px;
      font-size: 16px;
-     font-weight: 500;
+     font-weight: 700;
      cursor: pointer;
      color: var(--color-5);
      background-color: var(--color-2);
@@ -271,22 +271,22 @@
  }
 
  .academic__container {
-    max-width: 1200px;
-    margin: auto;
+     max-width: 1200px;
+     margin: auto;
  }
 
- .academic__box{
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+ .academic__box {
+     margin-top: 40px;
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
  }
 
- .academic__title{
-    display: flex;
-    justify-content: center;
-    font-size: 32px;
-    font-weight: 600;
+ .academic__title {
+     display: flex;
+     justify-content: center;
+     font-size: 32px;
+     font-weight: 600;
  }
 
  .academic__card {
@@ -330,47 +330,158 @@
  }
 
  .academic__card .back {
-    transform: perspective(600px) rotateY(180deg);
-    background: rgb(3, 35, 54);
-    padding: 15px;
-    color: #f3f3f3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    box-shadow: 0 5px 10px #000;
+     transform: perspective(600px) rotateY(180deg);
+     background: rgb(3, 35, 54);
+     padding: 15px;
+     color: #f3f3f3;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     text-align: center;
+     box-shadow: 0 5px 10px #000;
  }
 
- .academic__card .back .academic__face-link{
-    border-top: solid 1px #f3f3f3;
-    height: 50px;
-    line-height: 50px;
+ .academic__card .back .academic__face-link {
+     border-top: solid 1px #f3f3f3;
+     height: 50px;
+     line-height: 50px;
  }
 
- .academic__card .back .academic__face-link a{
-    color: #f3f3f3;
+ .academic__card .back .academic__face-link a {
+     color: #f3f3f3;
  }
 
- .academic__card .back h3{
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 20px;
-    letter-spacing: 1px;
+ .academic__card .back h3 {
+     font-size: 20px;
+     font-weight: 600;
+     margin-top: 20px;
+     letter-spacing: 1px;
  }
 
- .academic__card .back p{
-    font-size: 15px;
-    font-weight: 400;
+ .academic__card .back p {
+     font-size: 15px;
+     font-weight: 400;
  }
 
- .academic__card:hover .front{
-    transform: perspective(600px) rotateY(180deg);
+ .academic__card:hover .front {
+     transform: perspective(600px) rotateY(180deg);
  }
 
- .academic__card:hover .back{
-    transform: perspective(600px) rotateY(360deg);
+ .academic__card:hover .back {
+     transform: perspective(600px) rotateY(360deg);
  }
 
+ /* Projects 
+
+ .projects {
+     background: var(--color-5);
+     border-radius: 10px;
+     padding: 60px;
+     margin-bottom: 32px;
+ }
+
+
+ .projects__container {
+     max-width: 1200px;
+     margin: auto;
+ }
+
+ .projects__title {
+     display: flex;
+     justify-content: center;
+     font-size: 32px;
+     font-weight: 600;
+ } */
+
+ /* Contact */
+
+ .contact {
+     background: var(--color-5);
+     border-radius: 10px;
+     padding: 60px;
+     margin-bottom: 32px;
+ }
+
+ .contact__container {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     max-width: 1200px;
+ }
+
+ .contact__title {
+     display: flex;
+     justify-content: center;
+     font-size: 32px;
+     font-weight: 600;
+ }
+
+ .contact__text {
+     margin-top: 32px;
+     line-height: 25px;
+ }
+
+ .contact__form {
+     margin-top: 32px;
+     width: 100%;
+ }
+
+ .contact__form .form__box {
+     position: relative;
+     width: 100%;
+     margin-top: 10px;
+ }
+
+ .contact__form .form__box input,
+ .contact__form .form__box textarea {
+     width: 100%;
+     padding: 5px 0;
+     font-size: 16px;
+     margin: 20px 0;
+     border: none;
+     background: var(--color-5);
+     border-bottom: 2px solid var(--color-1);
+     outline: none;
+     resize: none;
+ }
+
+ .contact__form .form__box span {
+     position: absolute;
+     left: 0;
+     padding: 5px 0;
+     font-size: 16px;
+     margin: 10px 0;
+     pointer-events: none;
+     transition: .5s;
+     color: #666;
+ }
+
+ .contact__form .form__box input:focus~span,
+ .contact__form .form__box input:valid~span,
+ .contact__form .form__box textarea:focus~span,
+ .contact__form .form__box textarea:valid~span {
+     color: var(--color-1);
+     font-size: 12px;
+     transform: translateY(-20px);
+ }
+
+ .contact__form .form__box input[type="submit"] {
+     padding: 15px 25px;
+     font-size: 16px;
+     font-weight: 700;
+     cursor: pointer;
+     color: var(--color-5);
+     background-color: var(--color-2);
+     border: none;
+     border-radius: 15px;
+     box-shadow: 0 9px #999;
+ }
+
+ .contact__form .form__box input[type="submit"]:hover {
+     background-color: var(--color-1);
+     box-shadow: 0 5px #666;
+     transform: translateY(4px);
+ }
 
  @media only screen and (max-width: 1024px) {
 
