@@ -68,16 +68,18 @@
  }
 
  /* Header - Footer*/
- .header, .footer {
+ .header,
+ .footer {
      background-color: var(--color-1);
      padding: 70px;
  }
 
- .footer{
-    padding: 16px;
+ .footer {
+     padding: 16px;
  }
 
- .header__container, .footer__container {
+ .header__container,
+ .footer__container {
      display: flex;
      flex-direction: row;
      justify-content: center;
@@ -97,7 +99,8 @@
      color: var(--color-5);
  }
 
- .header__subtitle, .footer__subtitle {
+ .header__subtitle,
+ .footer__subtitle {
      font-size: 22px;
      font-weight: 400;
      line-height: 25px;
@@ -106,10 +109,11 @@
  }
 
  .footer__subtitle {
-    font-size: 16px;
+     font-size: 16px;
  }
 
- .header__network, .footer__network {
+ .header__network,
+ .footer__network {
      display: flex;
      flex-direction: row;
      justify-content: space-around;
@@ -119,7 +123,7 @@
  }
 
  .footer__network {
-    font-size: 22px;
+     font-size: 22px;
  }
 
  .header__btn {
@@ -319,7 +323,7 @@
  }
 
  .academic__card .front {
-     transform: perspective(600px) rotateY(0deg);
+     transform: perspective(520px) rotateY(0deg);
      box-shadow: 0 5px 10px #000;
  }
 
@@ -342,25 +346,26 @@
  }
 
  .academic__card .back {
-     transform: perspective(600px) rotateY(180deg);
-     background: rgb(3, 35, 54);
+
+     transform: perspective(520px) rotateY(180deg);
+     background: var(--color-2);
      padding: 15px;
-     color: #f3f3f3;
+     color: #fff;
      display: flex;
      flex-direction: column;
      justify-content: space-between;
      text-align: center;
-     box-shadow: 0 5px 10px #000;
+     box-shadow: 0 5px 10px var(--color-1);
  }
 
  .academic__card .back .academic__face-link {
-     border-top: solid 1px #f3f3f3;
+     border-top: solid 1px var(--color-5);
      height: 50px;
      line-height: 50px;
  }
 
  .academic__card .back .academic__face-link a {
-     color: #f3f3f3;
+     color: #fff;
  }
 
  .academic__card .back h3 {
@@ -376,11 +381,11 @@
  }
 
  .academic__card:hover .front {
-     transform: perspective(600px) rotateY(180deg);
+     transform: perspective(520px) rotateY(180deg);
  }
 
  .academic__card:hover .back {
-     transform: perspective(600px) rotateY(360deg);
+     transform: perspective(520px) rotateY(360deg);
  }
 
  /* Projects 
