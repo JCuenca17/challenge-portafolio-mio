@@ -185,71 +185,192 @@
  }
 
  /* Skills - Hobbies*/
- .skills, .hobbies {
+ .skills,
+ .hobbies {
      background: var(--color-5);
      border-radius: 10px;
      padding: 60px;
      margin-bottom: 32px;
  }
 
- .skills__container, .hobbies__container {
+ .skills__container,
+ .hobbies__container {
+     max-width: 1200px;
+     margin: auto;
+ }
+
+ .skills__title,
+ .hobbies__title {
+     display: flex;
+     justify-content: center;
+     font-size: 32px;
+     font-weight: 600;
+ }
+
+ .skills__card,
+ .hobbies__card {
+     margin-top: 40px;
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+
+ .skills__box,
+ .hobbies__box {
+     width: 220px;
+     height: 200px;
+     background: #fff;
+     margin: 10px;
+     border-radius: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     transition: all 300ms ease;
+ }
+
+ .skills__box:hover,
+ .hobbies__box:hover {
+     transform: scale(1.1);
+     box-shadow: 0 0 30px -15px rgba(0, 0, 0, 0.5);
+     background: var(--color-2);
+     z-index: 1;
+ }
+
+ .skills__box i,
+ .hobbies__box i {
+     font-size: 60px;
+     color: var(--color-2);
+ }
+
+ .skills__box:hover i,
+ .hobbies__box:hover i {
+     color: #fff;
+ }
+
+ .skills__box h5,
+ .hobbies__box h5 {
+     margin-top: 20px;
+     font-size: 16px;
+     font-weight: 500;
+     color: var(--color-1);
+ }
+
+ .skills__box:hover h5,
+ .hobbies__box:hover h5 {
+     color: #fff;
+ }
+
+
+ /* Academic*/
+ .academic {
+     background: var(--color-5);
+     border-radius: 10px;
+     padding: 60px;
+     margin-bottom: 32px;
+ }
+
+ .academic__container {
     max-width: 1200px;
     margin: auto;
  }
 
- .skills__title, .hobbies__title {
-    display: flex;
-    justify-content: center;
-    font-size: 32px;
-    font-weight: 600;
- }
-
- .skills__card, .hobbies__card {
+ .academic__box{
     margin-top: 40px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
  }
 
- .skills__box, .hobbies__box{
-    width: 220px;
-    height: 200px;
-    background: #fff;
-    margin: 10px;
-    border-radius: 10px;
+ .academic__title{
     display: flex;
-    align-items: center;
     justify-content: center;
+    font-size: 32px;
+    font-weight: 600;
+ }
+
+ .academic__card {
+     position: relative;
+     width: 260px;
+     height: 280px;
+     margin: 20px;
+ }
+
+ .academic__card .academic__face {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     backface-visibility: hidden;
+     border-radius: 20px;
+     overflow: hidden;
+     transition: .5s;
+ }
+
+ .academic__card .front {
+     transform: perspective(600px) rotateY(0deg);
+     box-shadow: 0 5px 10px #000;
+ }
+
+ .academic__card .front img {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .academic__card .front h3 {
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     height: 45px;
+     line-height: 45px;
+     color: #fff;
+     background: rgba(0, 0, 0, .4);
+     text-align: center;
+ }
+
+ .academic__card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
     flex-direction: column;
-    transition: all 300ms ease;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
  }
 
- .skills__box:hover, .hobbies__box:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 30px -15px rgba(0, 0, 0, 0.5);
-    background: var(--color-2);
-    z-index: 1;
+ .academic__card .back .academic__face-link{
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
  }
 
- .skills__box i, .hobbies__box i{
-    font-size: 60px;
-    color: var(--color-2);
+ .academic__card .back .academic__face-link a{
+    color: #f3f3f3;
  }
 
- .skills__box:hover i, .hobbies__box:hover i{
-    color: #fff;
- }
-
- .skills__box h5, .hobbies__box h5{
+ .academic__card .back h3{
+    font-size: 20px;
+    font-weight: 600;
     margin-top: 20px;
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--color-1);
+    letter-spacing: 1px;
  }
 
- .skills__box:hover h5, .hobbies__box:hover h5{
-    color: #fff;
+ .academic__card .back p{
+    font-size: 15px;
+    font-weight: 400;
  }
+
+ .academic__card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+ }
+
+ .academic__card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+ }
+
 
  @media only screen and (max-width: 1024px) {
 
