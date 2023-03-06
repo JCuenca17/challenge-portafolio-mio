@@ -15,17 +15,22 @@
     <nav class="menu">
         <div class="menu__container">
             <div class="menu__logo"><a href="index.html">Portafolio</a></div>
-            <input type="checkbox" id="click">
-            <label for="click" class="menu__btn">
-                <i class="fa-solid fa-bars"></i> </label>
+            <!--             <input type="checkbox" id="click">
+            <label for="click" class="menu__btn"> </label> -->
             <ul class="menu__list">
-                <li class="menu__list-item"><a class="menu__list-item-a" href="#about">Sobre Mí</a></li>
-                <li class="menu__list-item"><a class="menu__list-item-a" href="#skills">Skills</a></li>
-                <li class="menu__list-item"><a class="menu__list-item-a" href="#hobbies">Hobbies</a></li>
-                <li class="menu__list-item"><a class="menu__list-item-a" href="#academic">Formación</a></li>
+                <div class="menu__btn-cancel menu__icon">
+                    <i class="fa-solid fa-times"></i>
+                </div>
+                <li class="menu__list-item"><a href="#about">Sobre Mí</a></li>
+                <li class="menu__list-item"><a href="#skills">Skills</a></li>
+                <li class="menu__list-item"><a href="#hobbies">Hobbies</a></li>
+                <li class="menu__list-item"><a href="#academic">Formación</a></li>
                 <!-- <li class="menu__list-item"><a class="menu__list-item-a" href="#projects"></a>Proyectos</li> -->
-                <li class="menu__list-item"><a class="menu__list-item-a" href="#contact">Contacto</a></li>
+                <li class="menu__list-item"><a href="#contact">Contacto</a></li>
             </ul>
+            <div class="menu__btn-bar menu__icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
     </nav>
 
@@ -275,6 +280,29 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".menu");
+        const menu = document.querySelector(".menu__list");
+        const barBtn = document.querySelector(".menu__btn-bar");
+        const cancelBtn = document.querySelector(".menu__btn-cancel");
+        barBtn.onclick = () => {
+            menu.classList.add("active");
+            barBtn.classList.add("hide");
+            body.classList.add("disabledScroll");
+        }
+        cancelBtn.onclick = () => {
+            menu.classList.remove("active");
+            barBtn.classList.remove("hide");
+            body.classList.remove("disabledScroll");
+        }
+
+        window.onscroll = () => {
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky")
+        }
+    </script>
+
 </body>
 
 </html>

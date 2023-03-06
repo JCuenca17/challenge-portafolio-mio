@@ -16,55 +16,66 @@
      font-family: 'Poppins', sans-serif;
  }
 
-
  /* Menu */
 
- .menu__container {
-     height: 80px;
+ .menu {
+     position: fixed;
+     z-index: 5;
+     width: 100%;
+     padding: 32px 0;
+     transition: all 0.3 ease;
+ }
+
+ .menu.sticky {
+     padding: 10px 0;
      background: var(--color-1);
+ }
+
+ .menu__container {
+     max-width: 1320px;
+     margin: auto;
+     padding: 0px 30px;
+ }
+
+ .menu .menu__container {
      display: flex;
      align-items: center;
      justify-content: space-between;
-     padding: 0px 50px;
-
  }
 
- .menu__logo {
-     font-size: 33px;
+ .menu .menu__logo a {
      color: var(--color-5);
+     font-size: 30px;
      font-weight: 600;
  }
 
- .menu__list {
-     display: flex;
+ .menu .menu__list {
+     display: inline-flex;
  }
 
- .menu__list-item {
-     margin: 0 5px;
+ .menu__list .menu__list-item a {
      color: var(--color-5);
      font-size: 18px;
      font-weight: 500;
-     letter-spacing: 1px;
-     padding: 8px 10px;
-     border-radius: 5px;
-     transition: all 0.3s ease;
+     margin-left: 25px;
+     transition: all 0.3 ease;
  }
 
- .menu__list-item:hover {
-     color: var(--color-1);
-     background: var(--color-5);
-     cursor: pointer;
+ .menu__list .menu__list-item a:hover {
+     color: var(--color-4);
  }
 
- .menu__btn {
+ .menu__icon {
      color: var(--color-5);
-     font-size: 22px;
+     font-size: 20px;
      cursor: pointer;
      display: none;
  }
 
- #click {
-     display: none;
+ .menu__icon.menu__btn-cancel {
+     position: absolute;
+     right: 30px;
+     top: 20px;
  }
 
  /* Header - Footer*/
@@ -84,6 +95,7 @@
      flex-direction: row;
      justify-content: center;
      align-items: center;
+     margin-top: 50px;
  }
 
  .header__text .footer__text {
@@ -515,42 +527,42 @@
 
      /* Menu */
 
-     .menu__btn {
-         display: block;
+     body.disabledScroll {
+         overflow: hidden;
      }
 
-     #click:checked~.menu__btn i::before {
-         content: "";
-     }
-
-     .menu__list {
+     .menu .menu__list {
          position: fixed;
-         top: 80px;
+         top: 0;
          left: -100%;
-         background: var(--color-1);
          height: 100vh;
          width: 100%;
+         max-width: 400px;
+         background: var(--color-1);
          display: block;
+         padding: 40px 0;
          text-align: center;
          transition: all 0.3s ease;
      }
 
-     #click:checked~.menu__list {
+     .menu .menu__list.active {
          left: 0%;
      }
 
-     .menu__list-item {
-         margin: 40px 0;
+     .menu .menu__list .menu__list-item {
+         margin-top: 45px;
      }
 
-     .menu__list-item {
-         font-size: 20px;
+     .menu .menu__list .menu__list-item a {
+         font-size: 23px;
      }
 
-     .menu__list-item:hover {
-         color: var(--color-4);
-         background: none;
-         cursor: pointer;
+     .menu__icon {
+         display: block;
+     }
+
+     .menu__icon.hide {
+         display: none;
      }
 
      /* Header */
