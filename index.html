@@ -243,22 +243,34 @@
                         <h3>Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</h3>
                     </div>
                     <div class="contact__form">
-                        <form action="">
-                            <div class="form__box">
-                                <input type="text" name="" required>
-                                <span>Nombre Completo</span>
+                        <form action="" class="form" id="form">
+                            <div>
+                                <div class="form__box" id="form__box">
+                                    <input class="input" type="text" name="name" id="name" required>
+                                    <span>Nombre Completo</span>
+                                </div>
+                                <span id="error__name" class="input-message-error">Este campo no es valido</span>
                             </div>
-                            <div class="form__box">
-                                <input type="email" name="" required>
-                                <span>Email</span>
+                            <div>
+                                <div class="form__box">
+                                    <input class="input" type="email" name="email" id="email" required>
+                                    <span>Email</span>
+                                </div>
+                                <span id="error__email" class="input-message-error">Este campo no es valido</span>
                             </div>
-                            <div class="form__box">
-                                <input type="text" name="" required>
-                                <span>Asunto</span>
+                            <div>
+                                <div class="form__box">
+                                    <input class="input" type="text" name="issue" id="issue" required>
+                                    <span>Asunto</span>
+                                </div>
+                                <span id="error__issue" class="input-message-error">Este campo no es valido</span>
                             </div>
-                            <div class="form__box">
-                                <textarea required></textarea>
-                                <span>Mensaje</span>
+                            <div>
+                                <div class="form__box">
+                                    <textarea class="input" name="message" id="message" required></textarea>
+                                    <span>Mensaje</span>
+                                </div>
+                                <span id="error__message" class="input-message-error">Este campo no es valido</span>
                             </div>
                             <div class="form__box">
                                 <input type="submit" name="" value="Enviar">
@@ -288,27 +300,8 @@
         </div>
     </footer>
 
-    <script>
-        const body = document.querySelector("body");
-        const navbar = document.querySelector(".menu");
-        const menu = document.querySelector(".menu__list");
-        const barBtn = document.querySelector(".menu__btn-bar");
-        const cancelBtn = document.querySelector(".menu__btn-cancel");
-        barBtn.onclick = () => {
-            menu.classList.add("active");
-            barBtn.classList.add("hide");
-            body.classList.add("disabledScroll");
-        }
-        cancelBtn.onclick = () => {
-            menu.classList.remove("active");
-            barBtn.classList.remove("hide");
-            body.classList.remove("disabledScroll");
-        }
-
-        window.onscroll = () => {
-            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky")
-        }
-    </script>
+    <script src="js/menu.js"></script>
+    <script src="js/validaciones.js"></script>
 
 </body>
 

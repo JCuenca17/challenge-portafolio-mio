@@ -442,8 +442,7 @@
      margin-top: 10px;
  }
 
- .contact__form .form__box input,
- .contact__form .form__box textarea {
+ .contact__form .form__box .input {
      width: 100%;
      padding: 5px 0;
      font-size: 16px;
@@ -453,6 +452,27 @@
      border-bottom: 2px solid var(--color-1);
      outline: none;
      resize: none;
+ }
+
+ .input-invalid {
+     width: 100%;
+     padding: 5px 0;
+     font-size: 16px;
+     margin: 20px 0;
+     border: none;
+     background: var(--color-5);
+     border-bottom: 2px solid red;
+     outline: none;
+     resize: none;
+ }
+
+ .input-message-error {
+     display: none;
+ }
+
+ .input-message-error-active {
+     display: block;
+     color: red;
  }
 
  .contact__form .form__box span {
@@ -466,13 +486,18 @@
      color: #666;
  }
 
- .contact__form .form__box input:focus~span,
- .contact__form .form__box input:valid~span,
- .contact__form .form__box textarea:focus~span,
- .contact__form .form__box textarea:valid~span {
+ .contact__form .form__box .input:focus~span,
+ .contact__form .form__box .input:valid~span,
+ .contact__form .form__box .input-invalid:focus~span,
+ .contact__form .form__box .input-invalid:valid~span {
      color: var(--color-1);
      font-size: 12px;
      transform: translateY(-20px);
+ }
+
+ .contact__form .form__box .input-invalid:focus~span,
+ .contact__form .form__box .input-invalid:valid~span{
+    color: red;
  }
 
  .contact__form .form__box input[type="submit"] {
